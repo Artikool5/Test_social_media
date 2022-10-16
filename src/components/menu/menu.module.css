@@ -1,0 +1,19 @@
+.menu {
+    grid-area: menu;
+}
+
+menu {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.item a {
+    color: #a1b2ff;
+}
+
+.item a.active {
+    color: gold;
+}
