@@ -1,5 +1,7 @@
 .site-wrapper {
-    max-width: 1200px;
+    /*FIXME Почитстить от лишнего*/
+    /*max-width: 1200px;*/
+    min-height: 100vh;
 
     display: grid;
     grid-template-areas:
@@ -7,11 +9,12 @@
     'menu content content';
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
-    grid-gap: 10px;
+    /*grid-gap: 10px;*/
 
     margin: 0 auto;
 }
 
 .site-wrapper-content {
     grid-area: content;
+    background-color: #A1B2FF;
 }

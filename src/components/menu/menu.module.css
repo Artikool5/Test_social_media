@@ -1,5 +1,7 @@
 .menu {
     grid-area: menu;
+    background-image: linear-gradient(to bottom, #061A40, #003559);
+    min-height: 100%;
 }
 
 menu {
@@ -8,6 +10,18 @@ menu {
 
 a{
     text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 5px 20px;
+    background-image: radial-gradient(rgba(161, 178, 255,0.3) 10%,rgba(161, 178, 255,0) 60%);
+}
+
+a::after {
+    /*TODO Сделать разделительную линию между пунктами меню*/
+    content: '';
+    height: 1px;
+    width: 90%;
+    color: #a1b2ff;
 }
 
 .item a {
@@ -15,5 +29,5 @@ a{
 }
 
 .item a.active {
-    color: gold;
+    color: #E6C229;
 }
