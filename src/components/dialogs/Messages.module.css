@@ -1,0 +1,33 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    min-height: 100%;
+    color: #061A40;
+}
+
+.dialogsItems {
+    border-right: #003559 solid 2px;
+    text-align: center;
+    padding-inline-end: 20px;
+}
+
+.dialog{
+    padding-block: 10px;
+    font-weight: 600;
+}
+
+.dialog:visited{
+    color: #061A40;
+}
+
+.dialog.active {
+    background-color: rgba(0, 53, 89, 0.15);
+}
+
+.messages{
+    text-align: center;
+}
+
+.message{
+    padding-block: 10px;
+}

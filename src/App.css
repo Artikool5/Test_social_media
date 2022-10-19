@@ -17,4 +17,5 @@
 .site-wrapper-content {
     grid-area: content;
     background-color: #A1B2FF;
+    padding: 20px;
 }

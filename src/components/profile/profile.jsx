@@ -1,18 +1,13 @@
 import classes from "./profile.module.css";
 import MyPosts from "./posts/myPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = () => {
+const Profile = (props) => {
   return (
     <main>
       <img src="#" alt="#" />
-      <section className="user-about">
-        <img src="#" alt="#" />
-        <p>Name:</p>
-        <p>Birthday:</p>
-        <p>Education:</p>
-        <p>Web Site:</p>
-      </section>
-      <MyPosts />
+      <ProfileInfo />
+      <MyPosts posts={props.posts} />
     </main>
   );
 };
