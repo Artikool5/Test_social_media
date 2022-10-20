@@ -25,9 +25,34 @@
 }
 
 .messages{
-    text-align: center;
+    padding-left: 50px;
+    display: grid;
+    align-content: end;
 }
 
 .message{
     padding-block: 10px;
+}
+
+.newMessageArea {
+    display: flex;
+}
+
+.newMessageText {
+    resize: none;
+    width: 90%;
+    border-radius: 15px;
+    font-size: 1.2em;
+    padding: 5px;
+    outline-color: #003559;
+}
+
+.sentMessageButton {
+    width: 10%;
+    padding: 10px;
+    border-radius: 15px;
+    outline-color: #003559;
+    border: none;
+    background-color: #fff;
+    font-size: 1.5em;
 }

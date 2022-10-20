@@ -15,7 +15,17 @@ const Messages = (props) => {
   return (
     <div className={classes.dialogs}>
       <section className={classes.dialogsItems}>{DialogElements}</section>
-      <section className={classes.messages}>{MessageElements}</section>
+      <section className={classes.messages}>
+        {MessageElements}
+        <div className={classes.newMessageArea}>
+          <textarea
+            className={classes.newMessageText}
+            cols="70"
+            rows="3"
+          ></textarea>
+          <button className={classes.sentMessageButton}>-></button>
+        </div>
+      </section>
     </div>
   );
 };
