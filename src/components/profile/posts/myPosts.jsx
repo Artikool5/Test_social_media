@@ -10,7 +10,8 @@ const MyPosts = (props) => {
 
   let onButtonClick = () => {
     let text = newPostElement.current.value;
-    alert(text);
+    props.addPost(text);
+    newPostElement.current.value = "";
   };
   return (
     <section className={classes.postsSection}>
