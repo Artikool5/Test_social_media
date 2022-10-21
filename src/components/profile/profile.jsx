@@ -4,10 +4,15 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
   return (
-    <main>
+    <main className={classes.mainContent}>
       <img src="#" alt="#" />
       <ProfileInfo />
-      <MyPosts posts={props.posts} addPost={props.addPost} />
+      <MyPosts
+        posts={props.posts}
+        newPostText={props.newPostText}
+        addPost={props.addPost}
+        updateNewPostText={props.updateNewPostText}
+      />
     </main>
   );
 };

@@ -4,7 +4,6 @@ import Menu from "./components/menu/menu";
 import Profile from "./components/profile/profile";
 import Messages from "./components/dialogs/Messages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { dialogsData, messagesData, postsData } from "./redux/state";
 
 function App(props) {
   return (
@@ -19,7 +18,9 @@ function App(props) {
               element={
                 <Profile
                   posts={props.state.profilePage.postsData}
+                  newPostText={props.state.profilePage.newPostText}
                   addPost={props.addPost}
+                  updateNewPostText={props.updateNewPostText}
                 />
               }
             />

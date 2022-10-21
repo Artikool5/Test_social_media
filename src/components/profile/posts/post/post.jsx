@@ -1,12 +1,12 @@
-import classes from './post.module.css';
-
+import classes from "./post.module.css";
 
 const Post = (props) => {
-    return (
-        <article className={classes.item}>{props.message}
-        <span>{props.likes} likes</span>
-        </article>
-    )
-}
+  return (
+    <article className={classes.item}>
+      {props.message}
+      <div>{props.likes} likes</div>
+    </article>
+  );
+};
 
 export default Post;
