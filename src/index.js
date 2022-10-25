@@ -1,5 +1,5 @@
 import "./index.css";
-import state, { addPost, subscribe, updateNewPostText } from "./redux/state";
+import store from "./redux/store";
 import React from "react";
 import { DevSupport } from "@react-buddy/ide-toolbox";
 import { ComponentPreviews, useInitial } from "./dev";
@@ -15,15 +15,11 @@ const renderEntireTree = () => {
         ComponentPreviews={ComponentPreviews}
         useInitialHook={useInitial}
       >
-        <App
-          state={state}
-          addPost={addPost}
-          updateNewPostText={updateNewPostText}
-        />
+        <App state={store.getState()} dispatch={store.dispatch.bind(store)} />
       </DevSupport>
     </React.StrictMode>
   );
 };
 
-renderEntireTree(state, addPost);
-subscribe(renderEntireTree);
+renderEntireTree(store.getState());
+store.subscribe(renderEntireTree);

@@ -1,6 +1,7 @@
 import classes from "./profile.module.css";
 import MyPosts from "./posts/myPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import store from "../../redux/store";
 
 const Profile = (props) => {
   return (
@@ -10,8 +11,7 @@ const Profile = (props) => {
       <MyPosts
         posts={props.posts}
         newPostText={props.newPostText}
-        addPost={props.addPost}
-        updateNewPostText={props.updateNewPostText}
+        dispatch={store.dispatch.bind(store)}
       />
     </main>
   );
