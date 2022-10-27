@@ -28,7 +28,7 @@ const Messages = (props) => {
     newMessageElement.current.value = props.newMessageText;
     debugger;
   };
-
+  debugger;
   return (
     <div className={classes.dialogs}>
       <section className={classes.dialogsItems}>{DialogElements}</section>

@@ -4,7 +4,7 @@ import Menu from "./components/menu/menu";
 import Profile from "./components/profile/profile";
 import Messages from "./components/dialogs/Messages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import store from "./redux/store";
+// import store from "./redux/redux-store";
 
 function App(props) {
   return (
