@@ -2,9 +2,8 @@ import "./App.css";
 import Header from "./components/header/header";
 import Menu from "./components/menu/menu";
 import Profile from "./components/profile/profile";
-import Messages from "./components/dialogs/Messages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import store from "./redux/redux-store";
+import MessagesContainer from "./components/dialogs/MessagesContainer";
 
 function App(props) {
   return (
@@ -14,26 +13,10 @@ function App(props) {
         <Menu />
         <div className="site-wrapper-content">
           <Routes>
-            <Route
-              path="/profile"
-              element={
-                <Profile
-                  posts={props.state.profilePage.postsData}
-                  newPostText={props.state.profilePage.newPostText}
-                  dispatch={props.dispatch}
-                />
-              }
-            />
+            <Route path="/profile" element={<Profile store={props.store} />} />
             <Route
               path="/messages/*"
-              element={
-                <Messages
-                  dialogs={props.state.messagesPage.dialogsData}
-                  messages={props.state.messagesPage.messagesData}
-                  dispatch={props.dispatch}
-                  newMessageText={props.state.messagesPage.newMessageText}
-                />
-              }
+              element={<MessagesContainer store={props.store} />}
             />
           </Routes>
         </div>

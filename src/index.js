@@ -9,20 +9,18 @@ import ReactDOM from "react-dom/client";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const renderEntireTree = (state) => {
-  debugger;
   root.render(
     <React.StrictMode>
       <DevSupport
         ComponentPreviews={ComponentPreviews}
         useInitialHook={useInitial}
       >
-        <App state={state} dispatch={store.dispatch.bind(store)} />
+        <App state={state} store={store} />
       </DevSupport>
     </React.StrictMode>
   );
 };
 
-// console.log(store);
 renderEntireTree(store.getState());
 store.subscribe(() => {
   let state = store.getState();

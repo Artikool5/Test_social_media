@@ -35,15 +35,14 @@ const dialogsReducer = (state = initState, action) => {
         id: 10,
         text: state.newMessageText,
       };
-      state.messagesData.push(newMessage);
       state.newMessageText = "";
+      state.messagesData.push(newMessage);
       break;
     case UPDATE_NEW_MESSAGE_TEXT:
       state.newMessageText = action.newString;
       break;
 
     default:
-      console.error(`Wrong dispatch type of ${action.type}`);
       break;
   }
   return state;

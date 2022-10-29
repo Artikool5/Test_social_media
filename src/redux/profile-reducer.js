@@ -32,7 +32,6 @@ const profileReducer = (state = initState, action) => {
       state.newPostText = action.newString;
       break;
     default:
-      console.error(`Wrong dispatch type of ${action.type}`);
       break;
   }
   return state;

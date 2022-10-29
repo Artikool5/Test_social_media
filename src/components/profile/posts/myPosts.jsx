@@ -1,10 +1,6 @@
 import classes from "./myPosts.module.css";
 import Post from "./post/post";
 import React from "react";
-import {
-  addPostActionCreator,
-  updateNewPostTextActionCreator,
-} from "../../../redux/profile-reducer";
 
 const MyPosts = (props) => {
   let Posts = props.posts.map((post) => {
@@ -13,13 +9,9 @@ const MyPosts = (props) => {
 
   let newPostElement = React.createRef();
 
-  let onButtonClick = () => {
-    props.dispatch(addPostActionCreator());
-  };
-
   let onNewPostChange = () => {
     let text = newPostElement.current.value;
-    props.dispatch(updateNewPostTextActionCreator(text));
+    props.onNewPostChange(text);
     newPostElement.current.value = props.newPostText;
   };
 
@@ -37,7 +29,7 @@ const MyPosts = (props) => {
         rows="5"
       />
       <div>
-        <button className={classes.button} onClick={onButtonClick}>
+        <button className={classes.button} onClick={props.onButtonClick}>
           Опубликовать
         </button>
       </div>
