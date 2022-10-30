@@ -8,7 +8,6 @@ const MessagesContainer = (props) => {
   let state = props.store.getState().messagesPage;
 
   let sendMessage = () => {
-    //TODO Не очищается textarea, при удалении всего текста после первой отправки текст = undefined
     props.store.dispatch(addMessageActionCreator());
   };
 
