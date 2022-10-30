@@ -23,6 +23,7 @@ const MessagesContainer = (props) => {
       changeMessageBoxText={changeMessageBoxText}
       dialogs={state.dialogsData}
       messages={state.messagesData}
+      newMessageText={state.newMessageText}
     />
   );
 };

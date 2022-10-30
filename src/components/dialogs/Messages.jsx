@@ -19,7 +19,6 @@ const Messages = (props) => {
     props.changeMessageBoxText(text);
     newMessageElement.current.value = props.newMessageText;
   };
-
   return (
     <div className={classes.dialogs}>
       <section className={classes.dialogsItems}>{DialogElements}</section>
