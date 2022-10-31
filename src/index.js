@@ -5,17 +5,20 @@ import { DevSupport } from "@react-buddy/ide-toolbox";
 import { ComponentPreviews, useInitial } from "./dev";
 import App from "./App";
 import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const renderEntireTree = (state) => {
+const renderEntireTree = () => {
   root.render(
     <React.StrictMode>
       <DevSupport
         ComponentPreviews={ComponentPreviews}
         useInitialHook={useInitial}
       >
-        <App state={state} store={store} />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </DevSupport>
     </React.StrictMode>
   );
