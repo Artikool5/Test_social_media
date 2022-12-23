@@ -9,23 +9,15 @@ import { Provider } from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const renderEntireTree = () => {
-  root.render(
-    <React.StrictMode>
-      <DevSupport
-        ComponentPreviews={ComponentPreviews}
-        useInitialHook={useInitial}
-      >
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </DevSupport>
-    </React.StrictMode>
-  );
-};
-
-renderEntireTree(store.getState());
-store.subscribe(() => {
-  let state = store.getState();
-  renderEntireTree(state);
-});
+root.render(
+  <React.StrictMode>
+    <DevSupport
+      ComponentPreviews={ComponentPreviews}
+      useInitialHook={useInitial}
+    >
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </DevSupport>
+  </React.StrictMode>
+);

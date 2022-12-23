@@ -45,6 +45,14 @@ const Menu = () => {
             Settings
           </NavLink>
         </li>
+        <li className={classes.item}>
+          <NavLink
+            className={({ isActive }) => (isActive ? classes.active : "")}
+            to="/users"
+          >
+            Find users
+          </NavLink>
+        </li>
       </menu>
     </nav>
   );
