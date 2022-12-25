@@ -8,11 +8,11 @@
 .dialogsItems {
     border-right: #003559 solid 2px;
     text-align: center;
-    padding-inline-end: 20px;
+    padding-inline-end: 2rem;
 }
 
 .dialog{
-    padding-block: 10px;
+    padding-block: 1rem;
     font-weight: 600;
 }
 
@@ -25,13 +25,13 @@
 }
 
 .messages{
-    padding-left: 50px;
+    padding-left: 5rem;
     display: grid;
     align-content: end;
 }
 
 .message{
-    padding-block: 10px;
+    padding-block: 1rem;
 }
 
 .newMessageArea {
@@ -41,16 +41,16 @@
 .newMessageText {
     resize: none;
     width: 90%;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     font-size: 1.2em;
-    padding: 5px;
+    padding: 0.5rem;
     outline-color: #003559;
 }
 
 .sentMessageButton {
     width: 10%;
-    padding: 10px;
-    border-radius: 15px;
+    padding: 1rem;
+    border-radius: 1.5rem;
     outline-color: #003559;
     border: none;
     background-color: #fff;

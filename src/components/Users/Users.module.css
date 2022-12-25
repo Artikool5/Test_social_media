@@ -1,3 +1,37 @@
-.usersPage {
+.user {
+    display: flex;
+    margin-bottom: 1.6rem;
+    gap: 1.6rem;
+}
 
+.userAvatarContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.userAvatarContainer img {
+    width: 5rem;
+    border-radius: 50%;
+    padding-bottom: 1rem;
+    margin-left: 1.6rem;
+}
+
+.userInfo {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: space-between;
+
+    min-width: 30rem;
+    padding: 1rem;
+    background-color: #808fc9;
+}
+
+.userLocation {
+    justify-self: end;
+}
+
+.userStatus {
+    grid-area: 2/1/2/span 2;
 }

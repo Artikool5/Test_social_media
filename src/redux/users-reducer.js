@@ -9,6 +9,8 @@ let initState = {
       fullName: "Andrew",
       status: "Looking for a job right now",
       location: { country: "Russia", city: "Moscow" },
+      avatarURL:
+        "https://sualoo.com/uploads/testimonial_images/1533277299_main-user.png",
     },
     {
       id: 2,
@@ -16,6 +18,8 @@ let initState = {
       fullName: "Danil",
       status: "Love my wife",
       location: { country: "Ukraine", city: "Kiev" },
+      avatarURL:
+        "https://sualoo.com/uploads/testimonial_images/1533277299_main-user.png",
     },
     {
       id: 3,
@@ -23,6 +27,8 @@ let initState = {
       fullName: "Alex",
       status: "Searching for love",
       location: { country: "Russia", city: "Moscow" },
+      avatarURL:
+        "https://sualoo.com/uploads/testimonial_images/1533277299_main-user.png",
     },
     {
       id: 4,
@@ -30,11 +36,14 @@ let initState = {
       fullName: "Anton",
       status: "Looking for a job right now",
       location: { country: "Russia", city: "Rostov" },
+      avatarURL:
+        "https://sualoo.com/uploads/testimonial_images/1533277299_main-user.png",
     },
   ],
 };
 
 const usersReducer = (state = initState, action) => {
+  debugger;
   switch (action.type) {
     case TOGGLE_FOLLOWED_STATUS: {
       return {

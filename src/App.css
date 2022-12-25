@@ -7,7 +7,7 @@
     grid-template-areas:
     'header header header'
     'menu content content';
-    grid-template-rows: 60px 1fr;
+    grid-template-rows: 6rem 1fr;
     grid-template-columns: 2fr 10fr;
     /*grid-gap: 10px;*/
 
@@ -17,5 +17,5 @@
 .site-wrapper-content {
     grid-area: content;
     background-color: #A1B2FF;
-    padding: 20px;
+    padding: 2rem;
 }
