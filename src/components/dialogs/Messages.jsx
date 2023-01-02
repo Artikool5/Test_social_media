@@ -37,7 +37,7 @@ const Messages = (props) => {
             className={classes.sentMessageButton}
             onClick={props.sendMessage}
           >
-            ->
+            &rarr;
           </button>
         </div>
       </section>
