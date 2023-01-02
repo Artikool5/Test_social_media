@@ -4,7 +4,7 @@ import Menu from "./components/menu/menu";
 import Profile from "./components/profile/profile";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MessagesContainer from "./components/dialogs/MessagesContainer";
-import UsersContainer from "./components/Users/UsersContainer";
+import UsersContainer from "./components/Users/UsersContainer.jsx";
 
 function App(props) {
   return (
