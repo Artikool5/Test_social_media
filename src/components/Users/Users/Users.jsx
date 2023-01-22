@@ -4,28 +4,6 @@ import userPhoto from "../../../assets/images/defaultAvatar.webp";
 import { useEffect } from "react";
 
 const Users = (props) => {
-  const onPageChange = (pageNumber) => {
-    props.setCurrentPage(pageNumber);
-    axios
-      .get(
-        `https://social-network.samuraijs.com/api/1.0/users?count=${props.pageSize}&page=${pageNumber}`
-      )
-      .then((response) => {
-        props.setUsers(response.data.items);
-      });
-  };
-
-  useEffect(() => {
-    axios
-      .get(
-        `https://social-network.samuraijs.com/api/1.0/users?count=${props.pageSize}&page=${props.currentPage}`
-      )
-      .then((response) => {
-        props.setTotalUsersCount(response.data.totalCount);
-        props.setUsers(response.data.items);
-      });
-  }, []);
-
   let pages = [];
   let firstPageNumber, lastPageNumber;
   firstPageNumber = props.currentPage - 4 > 0 ? props.currentPage - 4 : 1;
@@ -43,7 +21,7 @@ const Users = (props) => {
             <span
               className={classes.page}
               onClick={(e) => {
-                onPageChange(1);
+                props.onPageChange(1);
               }}
             >
               {1}
@@ -59,7 +37,7 @@ const Users = (props) => {
               p === props.currentPage ? classes.selectedPage : ""
             } ${classes.page}`}
             onClick={(e) => {
-              onPageChange(p);
+              props.onPageChange(p);
             }}
           >
             {p}

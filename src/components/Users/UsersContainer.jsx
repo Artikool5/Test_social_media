@@ -1,5 +1,4 @@
 import { connect } from "react-redux";
-import Users from "./Users/Users.jsx";
 import {
   setCurrentPageAC,
   setTotalUsersCountAC,
