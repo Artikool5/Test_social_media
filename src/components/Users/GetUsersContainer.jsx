@@ -6,11 +6,10 @@ export const GetUsersContainer = (props) => {
   useEffect(() => {
     axios
       .get(
-        `https://social-network.samuraijs.com/api/1.0/users?count=${props.pageSize}&page=${props.currentPage}`
+        `https://randomuser.me/api/?page=${props.currentPage}&results=${props.pageSize}&seed=abc`
       )
       .then((response) => {
-        props.setTotalUsersCount(response.data.totalCount);
-        props.setUsers(response.data.items);
+        props.setUsers(response.data.results);
       });
   }, []);
 
@@ -18,10 +17,10 @@ export const GetUsersContainer = (props) => {
     props.setCurrentPage(pageNumber);
     axios
       .get(
-        `https://social-network.samuraijs.com/api/1.0/users?count=${props.pageSize}&page=${pageNumber}`
+        `https://randomuser.me/api/?page=${pageNumber}&results=${props.pageSize}&seed=abc`
       )
       .then((response) => {
-        props.setUsers(response.data.items);
+        props.setUsers(response.data.results);
       });
   };
 

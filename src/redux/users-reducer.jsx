@@ -4,44 +4,7 @@ const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
 const SET_TOTAL_COUNT = "SET_TOTAL_COUNT";
 
 let initState = {
-  users: [
-    // {
-    //   id: 1,
-    //   followed: true,
-    //   fullName: "Andrew",
-    //   status: "Looking for a job right now",
-    //   location: { country: "Russia", city: "Moscow" },
-    //   avatarURL:
-    //     "https://sualoo.com/uploads/testimonial_images/1533277299_main-user.png",
-    // },
-    // {
-    //   id: 2,
-    //   followed: false,
-    //   fullName: "Danil",
-    //   status: "Love my wife",
-    //   location: { country: "Ukraine", city: "Kiev" },
-    //   avatarURL:
-    //     "https://sualoo.com/uploads/testimonial_images/1533277299_main-user.png",
-    // },
-    // {
-    //   id: 3,
-    //   followed: false,
-    //   fullName: "Alex",
-    //   status: "Searching for love",
-    //   location: { country: "Russia", city: "Moscow" },
-    //   avatarURL:
-    //     "https://sualoo.com/uploads/testimonial_images/1533277299_main-user.png",
-    // },
-    // {
-    //   id: 4,
-    //   followed: true,
-    //   fullName: "Anton",
-    //   status: "Looking for a job right now",
-    //   location: { country: "Russia", city: "Rostov" },
-    //   avatarURL:
-    //     "https://sualoo.com/uploads/testimonial_images/1533277299_main-user.png",
-    // },
-  ],
+  users: [],
   pageSize: 5,
   totalUsersCount: 0,
   currentPage: 1,
@@ -92,7 +55,5 @@ export const setTotalUsersCountAC = (totalCount) => ({
   type: SET_TOTAL_COUNT,
   totalCount,
 });
-
-
 
 export default usersReducer;

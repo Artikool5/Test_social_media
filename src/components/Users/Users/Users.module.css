@@ -36,15 +36,11 @@
     grid-template-columns: auto auto;
     align-content: space-between;
 
-    min-width: 30rem;
+    width: 30rem;
     padding: 1rem;
     background-color: #808fc9;
 }
 
 .userLocation {
-    justify-self: end;
-}
-
-.userStatus {
     grid-area: 2/1/2/span 2;
 }

@@ -48,7 +48,7 @@ const Users = (props) => {
         <div className={classes.user} key={user.id}>
           <div className={classes.userAvatarContainer}>
             <img
-              src={user.photos.small ? user.photos.small : userPhoto}
+              src={user.picture.thumbnail ? user.picture.thumbnail : userPhoto}
               alt="Avatar"
             />
             <button
@@ -56,15 +56,15 @@ const Users = (props) => {
                 props.toggleFollowedStatus(user.id);
               }}
             >
-              {user.followed ? "Unfollow" : "Follow"}
+              {/*{user.followed ? "Unfollow" : "Follow"}*/}
+              Unfollow
             </button>
           </div>
           <div className={classes.userInfo}>
-            <div>{user.name}</div>
+            <div>{user.name.first + " " + user.name.last}</div>
             <div className={classes.userLocation}>
-              {/*{"user.location.country" + ", " + "user.location.city"}*/}
+              {user.location.country + ", " + user.location.city}
             </div>
-            <div className={classes.userStatus}>{user.status}</div>
           </div>
         </div>
       ))}
