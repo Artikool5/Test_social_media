@@ -20,15 +20,19 @@
 .userAvatarContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
+    align-items: center;
+    width: 7rem;
 }
 
 .userAvatarContainer img {
     width: 5rem;
     border-radius: 50%;
     padding-bottom: 1rem;
-    margin-left: 1.6rem;
+}
+
+.userAvatarContainer button {
+    width: 100%;
+    padding: .3rem;
 }
 
 .userInfo {

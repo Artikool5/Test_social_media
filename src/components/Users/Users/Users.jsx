@@ -45,7 +45,7 @@ const Users = (props) => {
         ))}
       </nav>
       {props.users.map((user) => (
-        <div className={classes.user} key={user.id}>
+        <div className={classes.user} key={user.id.value}>
           <div className={classes.userAvatarContainer}>
             <img
               src={user.picture.thumbnail ? user.picture.thumbnail : userPhoto}
@@ -57,7 +57,7 @@ const Users = (props) => {
               }}
             >
               {/*{user.followed ? "Unfollow" : "Follow"}*/}
-              Unfollow
+              Follow
             </button>
           </div>
           <div className={classes.userInfo}>
