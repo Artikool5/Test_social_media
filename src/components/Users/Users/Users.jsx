@@ -1,7 +1,7 @@
+import { Pagination } from "./Pagination/Pagination";
+import { Preloader } from "./Preloader/Preloader";
+import { User } from "./User/User";
 import classes from "./Users.module.css";
-import axios from "axios";
-import userPhoto from "../../../assets/images/defaultAvatar.webp";
-import { useEffect } from "react";
 
 const Users = (props) => {
   let pages = [];
@@ -14,60 +14,20 @@ const Users = (props) => {
   }
 
   return (
-    <div>
-      <nav>
-        {props.currentPage >= 6 ? (
-          <span>
-            <span
-              className={classes.page}
-              onClick={(e) => {
-                props.onPageChange(1);
-              }}
-            >
-              {1}
-            </span>
-            <span className={classes.page}>...</span>
-          </span>
-        ) : (
-          ""
-        )}
-        {pages?.map((p) => (
-          <span
-            className={`${
-              p === props.currentPage ? classes.selectedPage : ""
-            } ${classes.page}`}
-            onClick={(e) => {
-              props.onPageChange(p);
-            }}
-          >
-            {p}
-          </span>
-        ))}
-      </nav>
-      {props.users.map((user) => (
-        <div className={classes.user} key={user.id.value}>
-          <div className={classes.userAvatarContainer}>
-            <img
-              src={user.picture.thumbnail ? user.picture.thumbnail : userPhoto}
-              alt="Avatar"
-            />
-            <button
-              onClick={() => {
-                props.toggleFollowedStatus(user.id);
-              }}
-            >
-              {/*{user.followed ? "Unfollow" : "Follow"}*/}
-              Follow
-            </button>
-          </div>
-          <div className={classes.userInfo}>
-            <div>{user.name.first + " " + user.name.last}</div>
-            <div className={classes.userLocation}>
-              {user.location.country + ", " + user.location.city}
-            </div>
-          </div>
-        </div>
-      ))}
+    <div className={classes.usersContainer}>
+      <Pagination
+        pages={pages}
+        currentPage={props.currentPage}
+        onPageChange={props.onPageChange}
+      />
+      {props.isFetching ? (
+        <Preloader pageSize={props.pageSize} />
+      ) : (
+        <User
+          users={props.users}
+          toggleFollowedStatus={props.toggleFollowedStatus}
+        />
+      )}
     </div>
   );
 };
